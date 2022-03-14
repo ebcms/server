@@ -25,7 +25,7 @@
             EBCMS.console("版本检测...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/check')}",
+                url: "{echo $router->build('/ebcms/server/check')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -48,7 +48,7 @@
             EBCMS.console("获取资源信息...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/source')}",
+                url: "{echo $router->build('/ebcms/server/source')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -71,7 +71,7 @@
             EBCMS.console("开始下载~");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/download')}",
+                url: "{echo $router->build('/ebcms/server/download')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -94,7 +94,7 @@
             EBCMS.console("程序备份中...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/backup')}",
+                url: "{echo $router->build('/ebcms/server/backup')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -117,7 +117,7 @@
             EBCMS.console("程序升级中...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/cover')}",
+                url: "{echo $router->build('/ebcms/server/cover')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -136,7 +136,7 @@
             EBCMS.console("数据升级中...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/install')}",
+                url: "{echo $router->build('/ebcms/server/install')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -162,7 +162,7 @@
             EBCMS.console("还原中...");
             $.ajax({
                 type: "GET",
-                url: "{$router->build('/ebcms/server/rollback')}",
+                url: "{echo $router->build('/ebcms/server/rollback')}",
                 dataType: "json",
                 success: function(response) {
                     if (response.status) {
@@ -222,7 +222,7 @@
     $(function() {
         $.ajax({
             type: "GET",
-            url: "{$router->build('/ebcms/server/check')}",
+            url: "{echo $router->build('/ebcms/server/check')}",
             dataType: "json",
             success: function(response) {
                 $("#tips .notice").html(response.message);
