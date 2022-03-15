@@ -11,7 +11,7 @@ return [
     ): array {
         $res = [];
         if ($data = $server->query('/check')) {
-            if ($data['status']) {
+            if (!$data['code']) {
                 $res[] = [
                     'title' => '系统升级',
                     'url' => $router->build('/ebcms/server/index'),

@@ -15,8 +15,8 @@ class Check extends Common
     ) {
         try {
             $res = $server->query('/check');
-            if (!$res['status']) {
-                return $this->error($res['message']);
+            if ($res['code']) {
+                return $this->error($res['message'], $res['redirect_url'] ?? null, $res['code'] ?? 1, $res['data'] ?? null);
             }
             return $this->success($res['message'], $res['data']);
         } catch (Throwable $th) {

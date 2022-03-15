@@ -27,8 +27,8 @@ class Source extends Common
                     'token' => $token
                 ]),
             ]);
-            if (!$res['status']) {
-                return $this->error($res['message']);
+            if ($res['code']) {
+                return $this->error($res['message'], $res['redirect_url'] ?? '', $res['code']);
             }
             if (null === $upgrade = $cache->get('serversource')) {
                 return $this->error('超时，请重新操作~');
