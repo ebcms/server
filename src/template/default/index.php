@@ -191,7 +191,7 @@
     });
 </script>
 <div class="container">
-    <div class="my-4 display-4">系统升级</div>
+    <div class="my-4 h1">系统升级</div>
     <div class="my-4">
         <button class="btn btn-primary" onclick="EBCMS.handler();" id="handler">一键升级</button>
         <button class="btn btn-secondary ms-2" onclick="$('.console').html('')">清理日志</button>
