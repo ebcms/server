@@ -29,7 +29,7 @@ class Backup extends Common
             ];
             $this->backup($upgrade['backup_dirs'], $root_path, $upgrade['backup_path']);
             $session->set('upgrade', $upgrade);
-            return $this->success('备份成功！', '', $upgrade);
+            return $this->success('备份成功！', $upgrade);
         } catch (Throwable $th) {
             return $this->error($th->getMessage());
         }
