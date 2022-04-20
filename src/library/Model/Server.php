@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Ebcms\Server\Model;
 
 use Composer\InstalledVersions;
-use DigPHP\Framework\Config;
-use DigPHP\Framework\Framework;
 use DigPHP\Router\Router;
+use Ebcms\Framework\Config;
+use Ebcms\Framework\Framework;
 use Exception;
 use Throwable;
 
@@ -24,7 +24,7 @@ class Server
     {
         try {
             $url = $this->api . $path . '?' . http_build_query($this->getCommonParam());
-            $res = (array)json_decode($this->post($url, $param), true);
+            $res = (array) json_decode($this->post($url, $param), true);
             if (!isset($res['code'])) {
                 return [
                     'code' => 1,
