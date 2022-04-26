@@ -6,7 +6,7 @@ namespace App\Ebcms\Server\Http;
 
 use App\Ebcms\Admin\Http\Common;
 use Composer\InstalledVersions;
-use DigPHP\Session\Session;
+use DiggPHP\Session\Session;
 use Exception;
 use Throwable;
 use ZipArchive;

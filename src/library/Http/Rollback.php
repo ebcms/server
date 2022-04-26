@@ -7,7 +7,7 @@ namespace App\Ebcms\Server\Http;
 use App\Ebcms\Admin\Http\Common;
 use App\Ebcms\Server\Traits\DirTrait;
 use Composer\InstalledVersions;
-use DigPHP\Session\Session;
+use DiggPHP\Session\Session;
 use Throwable;
 
 class Rollback extends Common
