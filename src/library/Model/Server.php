@@ -71,7 +71,7 @@ class Server
                 'verify_peer_name' => false,
             ];
         }
-        $response = file_get_contents($url, false, stream_context_create($options));
+        $response = @file_get_contents($url, false, stream_context_create($options));
         if (false === $response) {
             throw new Exception('post(' . $url . ') failure!');
         }
@@ -95,7 +95,7 @@ class Server
                 'verify_peer_name' => false,
             ];
         }
-        $response = file_get_contents($url, false, stream_context_create($options));
+        $response = @file_get_contents($url, false, stream_context_create($options));
         if (false === $response) {
             throw new Exception('post(' . $url . ') failure!');
         }
